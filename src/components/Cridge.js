@@ -7,7 +7,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
-import { Facebook, LinkedIn, Airbnb, Spotify, minHomePic,Feature1 } from "./ComponetsImp";
+import { Facebook, LinkedIn, Airbnb, Spotify, minHomePic, Feature1 } from "./ComponetsImp";
 
 const useStyles = makeStyles((theme) => ({
     myParagraphOne: {
@@ -62,28 +62,64 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     mediaIcons: {
-        marginTop: '79px',
-        marginBottom: '79px',
+        marginTop: '58px',
+        marginBottom: '58px',
         display: 'flex',
         justifyContent: 'space-between',
+        ['@media (max-width:991px)']: {
+            flexWrap:'wrap',
+        },
         '&>img': {
+            flexGrow:'1',
             maxWidth: '142px',
             width: '100%',
-            maxHeight: '28px',
+            ['@media (max-width:991px)']: {
+                maxWidth: '110px',
+            }
+        },
+        '&>div':{
+            marginTop:'21px',
+            marginBottom:'21px',
+
+            ['@media (max-width:991px)']: {
+                minWidth:'50%',
+            }
         }
     },
-    FigureOne: {
+    FeatureOne: {
         marginTop: '165px',
+        ['@media (max-width:991px)']: {
+            marginTop: '60px',
+            textAlign:'center'
+        }
     },
     FeatureOneText: {
         color: '#4717B3',
         fontSize: '20px',
         fontFamily: 'Roboto',
     },
-    FeatureOneImg:{
-        maxWidth:'412px',
-        width:'100%',
+    FeatureOneImg: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        ['@media (max-width:991px)']: {
+            justifyContent: 'center',
+        },
+        '&>img': {
+            maxWidth: '412px',
+            width: '100%',
+        }
     },
+    smRight:{
+        ['@media (max-width:991px)']: {
+            textAlign:"right"
+        }
+    },
+    smLeft:{
+        ['@media (max-width:991px)']: {
+            textAlign:"left"
+        }
+    }
 }));
 function Cridge(props) {
     const classes = useStyles();
@@ -106,14 +142,22 @@ function Cridge(props) {
                     <img src={minHomePic} className={classes.minHomePic} />
                 </div>
                 <div className={classes.mediaIcons}>
+                    <div className={classes.smLeft}>
                     <img src={Facebook} />
+                    </div>
+                    <div className={classes.smRight}>
                     <img src={LinkedIn} />
+                    </div>
+                    <div  className={classes.smLeft}>
                     <img src={Airbnb} />
+                    </div>
+                    <div className={classes.smRight}>
                     <img src={Spotify} />
+                    </div>
                 </div>
-                <div className={classes.FigureOne}>
+                <div className={classes.FeatureOne}>
                     <Grid container spacing={3}>
-                        <Grid item md={6}>
+                        <Grid item md={6} xs={12}>
                             <div className={classes.FeatureOneText}>
                                 Feature 1
                             </div>
@@ -126,10 +170,10 @@ function Cridge(props) {
                                 Sign up
                          </Button>
                         </Grid>
-                        <Grid item md={6}>
-                            <div>
-                                <img src={Feature1} className={classes.FeatureOneImg}/>
-                                </div>
+                        <Grid item md={6}  xs={12}>
+                            <div className={classes.FeatureOneImg}>
+                                <img src={Feature1} />
+                            </div>
                         </Grid>
                     </Grid>
                 </div>

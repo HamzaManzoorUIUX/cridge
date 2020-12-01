@@ -14,7 +14,12 @@
 .ml-2{
   margin-left: 8px !important;
 }
-
-
+.dropIcon.true{
+  transform: rotateZ(180deg);
+  transition: all;
+}
+.position-relative{
+  position: relative;
+}
 
 
