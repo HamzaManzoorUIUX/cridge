@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandMoreIcon from './ExpandMoreIcon';
+import Lock from '../assets/icons/lock.svg';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
             marginRight: '20px',
             marginLeft: '20px',
             display:'flex',
-            alignItems:'center'
+            alignItems:'baseline'
         }
     },
     nav: {
@@ -68,13 +69,18 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         textDecoration: 'none',
         fontWeight: "bold",
-    }
+    },
+lockIcon:{
+    height:'9.5px',
+    width:'7.13px',
+    marginRight:'8px'
+}
 }));
 
 function NavBar(props) {
     const classes = useStyles();
-    const [productDrop,setproductDrop]=useState('hide');
-    const [solutionDrop,setsolutionDrop]=useState('hide');
+    const [productDrop,setproductDrop]=useState('downIcon');
+    const [solutionDrop,setsolutionDrop]=useState('downIcon');
     return (
         <nav className={classes.nav}>
             <Container fixed>
@@ -83,10 +89,10 @@ function NavBar(props) {
             </a>
                 <ul className={classes.navMenu}>
                     <li className='h-nav-link '>
-                        Products <ExpandMoreIcon className={`dropDown ${productDrop}`}/>
+                        Products <ExpandMoreIcon width={'7.66px'} height={'4.83px'} property={`ml-2 ${productDrop}`}/>
                 </li>
                     <li className='h-nav-link'>
-                        Solutions <ExpandMoreIcon className={`dropDown ${solutionDrop}`}/>
+                        Solutions <ExpandMoreIcon width={'7.66px'} height={'4.83px'} property={`ml-2 ${solutionDrop}`}/>
                 </li>
                     <li className='h-nav-link'>
                         Pricing
@@ -95,7 +101,7 @@ function NavBar(props) {
                 <ul className={classes.navBtn}>
                     <li className='h-navBtn-item'>
                         <a href='!#' className={classes.logIn}>
-                            Login
+                          <img src={Lock} className={classes.lockIcon} />  Login
                     </a>
                     </li>
                     <li className='h-navBtn-item'>
