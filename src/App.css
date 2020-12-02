@@ -61,7 +61,7 @@ footer.myFooter{
   font-size: 18px;
 }
 .logIn {
-  font-size: 14px;
+  font-size: 16px;
   font-family: Roboto;
   padding: 7px 44px;
   color: black;
@@ -168,7 +168,54 @@ width: 100%;
   margin-top: 18px;
   margin-bottom: 18px;
 }
+.FeatureOne {
+  margin-top: 165px;
+  margin-bottom: 165px;
+}
+.FeatureOneImg>img{
+  max-width: 412px;
+  width: 100%;
+}
+.FeatureOneImg{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.myParagraphOne {
+  font-size: 20px;
+  
+}
+.myHeadingOneMargin{
+  margin-top:48px 
+ 
+}
+.minHomePic{
+  max-width: 627.6px;
+  width: 100%;
+  margin-top: 79px;
+  
+}
+.mediaIcons>div{
+  margin-top: 21px;
+  margin-bottom: 21px;
 
+  
+}
+.mediaIcons >img {
+  flex-grow: 1;
+  max-width: 142px;
+  width: 100%;
+}
+.mediaIcons{
+  margin-top: 58px;
+  margin-bottom: 58px;
+  display: flex;
+  justify-content: space-between;
+
+  
+ 
+  
+}
 @media (min-width: 1280px)
 {
   .MuiContainer-maxWidthLg {
@@ -177,6 +224,26 @@ width: 100%;
 }
 }
 @media (max-width:991px) {
+  .mediaIcons>div{
+    min-width: 50%;
+  }
+  .mediaIcons >img {
+    max-width: 110px;
+  }
+  .FeatureOneImg{
+justify-content: center;
+  }
+  .FeatureOne{
+    margin-top: 60px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .smRight{
+    text-align: right;
+  }
+  .smLeft{
+    text-align: left;
+  }
   .subscribeInput{
     width: 100%;
     margin: auto;
@@ -311,6 +378,19 @@ text-align: center !important;
   }
 }
 @media (max-width:768px){
+  .mediaIcons{
+    flex-wrap: wrap;
+  }
+  .minHomePic{
+    display: none;
+  }
+  .myHeadingOneMargin{
+    margin-top:42px 
+   
+  }
+  .myParagraphOne {
+    font-size: 14px;
+  }
   .featurTwoCard{
     text-align: center;
     max-width: 100%;

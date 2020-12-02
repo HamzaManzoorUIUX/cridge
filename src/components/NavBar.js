@@ -174,7 +174,7 @@ function NavBar(props) {
                         <ul className={classes.navBtn}>
                             <li className='h-navBtn-item'>
                                 <a href='!#' className='logIn'>
-                                    <img src={Lock} className={classes.lockIcon} />  Login
+                                    <img src={Lock} className={classes.lockIcon}  alt='lock'/>  Login
                     </a>
                             </li>
                             <li className='h-navBtn-item'>

@@ -22,38 +22,19 @@ const useStyles = makeStyles((theme) => ({
     center: {
         textAlign: 'center'
     }, 
-    FeatureOne: {
-        marginTop: '165px',
-        marginBottom: '165px',
-        ['@media (max-width:991px)']: {
-            marginTop: '60px',
-            marginBottom: '60px',
-            textAlign:'center'
-        }
-    },
+  
     FeatureOneText: {
         color: '#4717B3',
         fontSize: '20px',
         fontFamily: 'Roboto',
     },
-    FeatureOneImg: {
-        display: 'flex',
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-        ['@media (max-width:991px)']: {
-            justifyContent: 'center',
-        },
-        '&>img': {
-            maxWidth: '412px',
-            width: '100%',
-        }
-    },
+   
 }));
 
 function FeatureOne(props) {
     const classes = useStyles();
     return (
-        <div className={classes.FeatureOne}>
+        <div className='FeatureOne'>
         <Grid container spacing={3}>
             <Grid item md={6} xs={12}>
                 <div className={classes.FeatureOneText}>
@@ -69,8 +50,8 @@ function FeatureOne(props) {
              </Button>
             </Grid>
             <Grid item md={6}  xs={12}>
-                <div className={classes.FeatureOneImg}>
-                    <img src={Feature1} />
+                <div className='FeatureOneImg'>
+                    <img src={Feature1} alt="FeatureOneImg"/>
                 </div>
             </Grid>
         </Grid>
