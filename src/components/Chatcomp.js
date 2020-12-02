@@ -10,27 +10,8 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '34px',
         paddingBottom: '34px',
     },
-    details: {
-        maxWidth: '512px',
-        width: '100%',
-        fontSize: '28px',
-        fontWeight: "bold",
-        lineHeight: '44px',
-    },
-    tags: {
-        marginTop: '34px',
-        fontWeight: "bold",
-        fontSize: '19px',
-        color: '#4717B3',
-    },
-    chatImgDiv: {
-        
-        '&>img': {
-            maxWidth: '383px',
-            width: '100%',
+    
 
-        }
-    },
     centerAlign: {
         display: 'flex',
         justifyContent: 'center',
@@ -43,20 +24,20 @@ function Chatcomp(props) {
     return (
         <div className={classes.root}>
             <Container fixed>
-                <Grid container>
+                <Grid container className='sm-center'>
                     <Grid item md={6} sm={12} className={classes.centerAlign}>
                         <div>
-                            <div className={classes.details}>
+                            <div className='c-details'>
                                 Lorem ipsum dolor sit amet, consetetur
                                 sadipscing elitr, sed diam nonumy eirmod tempor
                         </div>
-                            <div className={classes.tags}>
+                            <div className='c-tags'>
                                 Maciej Malesa , CTO, GTChat
                         </div>
                         </div>
                     </Grid>
-                    <Grid item md={6} sm={12}>
-                        <div className={`myImgRight ${classes.chatImgDiv}`}>
+                    <Grid item md={6} sm={12} >
+                        <div className={`myImgRight chatImgDiv`}>
                             <img src={chatImg} alt="chatImg" />
                         </div>
                     </Grid>

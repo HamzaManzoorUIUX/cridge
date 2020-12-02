@@ -4,35 +4,7 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
-    card: {
-        padding: '14px 35px',
-        maxWidth: '342px',
-        border: '1px solid #EBF2FE',
-        boxShadow: '0px 3px 6px 0px rgba(0,0,0,0.16)',
-        borderRadius: '4px',
-        marginTop: '18px',
-        marginBottom: '18px',
-        '&>h3': {
-            fontSize: '26px',
-            fontWeight: "bold",
-            marginTop: '0px',
-            marginBottom: '10px',
-        },
-        '&>p': {
-            fontSize: '12px',
-            fontWeight: "normal",
-            marginTop: '0px',
-            marginBottom: '0px',
-        },
-        '&>a': {
-            fontSize: '12px',
-            fontWeight: "normal",
-            marginTop: '0px',
-            marginBottom: '0px',
-            textDecoration: 'underline',
-        },
-
-    },
+    
     FeatureTwoText: {
         color: '#4717B3',
         fontSize: '20px',
@@ -56,9 +28,9 @@ function FeatureTwo(props) {
     const classes = useStyles();
     return (
         <div className='featureTwo'>
-            <Grid container>
-            <Grid item md={6} sm={12}>
-                <div className={classes.card}>
+            <Grid container className='sm-flex-reverse'>
+            <Grid item xs={12} md={6} sm={12}>
+                <div className={`featurTwoCard`}>
                     <h3>
                         Emailing solution
                </h3>
@@ -70,7 +42,7 @@ function FeatureTwo(props) {
                         Learn more about this feature
                </a>
                 </div>
-                <div className={classes.card}>
+                <div className={`featurTwoCard`}>
                     <h3>
                         SMS solution
                </h3>
@@ -83,7 +55,7 @@ function FeatureTwo(props) {
                </a>
                 </div>
             </Grid>
-            <Grid item md={6} sm={12} className='text-md-right' >
+            <Grid item xs={12} md={6} sm={12} className='text-md-right' >
                 <div className={classes.FeatureTwoText}>
                     Feature 2
                 </div>

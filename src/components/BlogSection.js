@@ -15,24 +15,28 @@ function BlogSection(props) {
                     sadipscing elitr, sed diam nonumy eirmod tempor
                 </p>
             <Grid container spacing={3}>
-                <Grid item md={4} sm={12}>
+                <Grid item xs={12} sm={12} md={4}>
                     <Card image={'3.jpg'} title={'sample Image'} header={`10 awesome see skills to
 master in 2021`} />
                 </Grid>
-                <Grid item md={4} sm={12}>
+                <Grid item xs={12} md={4} sm={12}>
                     <Card image={'2.jpg'} title={'sample Image'} header={`10 awesome see skills to
 master in 2021`} />
                 </Grid>
-                <Grid item md={4} sm={12}>
+                <Grid item xs={12} md={4} sm={12} >
                     <Card image={'1.jpg'} title={'sample Image'} header={`10 awesome see skills to
 master in 2021`} />
                 </Grid>
             </Grid>
-            <Grid container spacing={3}>
+            <Grid container spacing={3} className='visitDiv'>
                 <Grid item md={6} sm={12}>
-                    <Visiting/>
+                    <Visiting linkText='Visit help Center' decrip='Lorem ipsum dolor sit amet, consetetur 
+sadipscing elitr, sed diam nonumy' title='Visit our help center' image='visit.svg' />
                 </Grid>
-                <Grid item md={6} sm={12}></Grid>
+                <Grid item md={6} sm={12}>
+                    <Visiting linkText='Join our community' decrip='Lorem ipsum dolor sit amet, consetetur 
+sadipscing elitr, sed diam nonumy' title='Explore community' image='join.svg' />
+                </Grid>
             </Grid>
         </div>
     );

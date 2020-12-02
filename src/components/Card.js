@@ -9,9 +9,12 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     maxWidth: 349,
+    margin:'auto',
   },
   media: {
     height: 386,
+    maxWidth:349,
+    width:'100%',
   },
   actionBtn:{
 position:"relative",

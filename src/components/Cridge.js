@@ -9,6 +9,9 @@ import FeatureOne from "./FeatureOne";
 import Chatcomp from "./Chatcomp";
 import FeatureTwo from "./FeatureTwo";
 import BlogSection from "./BlogSection";
+import FAQs from './FAQs';
+import Subscrib from './Subscrib';
+import Footer from './Footer';
 
 
 function Cridge(props) {
@@ -24,6 +27,9 @@ function Cridge(props) {
             <Container fixed>
             <FeatureTwo/>
             <BlogSection/>
+            <FAQs/>
+            <Subscrib/>
+            <Footer/>
             </Container>
         </React.Fragment>
     );
