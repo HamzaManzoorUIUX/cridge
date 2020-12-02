@@ -5,26 +5,8 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-    myParagraphOne: {
-        fontSize: '20px',
-        fontFamily: 'Roboto',
-        color: 'black',
-        ['@media (max-width:768px)']: {
-            fontSize: '14px',
-        }
-    },
-    myHeadingOne: {
-        fontSize: '40px',
-        fontFamily: 'Roboto',
-        fontWeight: 'bold',
-        lineHeight: '48px',
-        marginBottom: '21px',
-        marginTop: '21px',
-        ['@media (max-width:768px)']: {
-            fontSize: '22px',
-            lineHeight: '27px',
-        }
-    },
+    
+   
     signUpBtn: {
         background: 'linear-gradient(#6B33D6, #4213AE)',
         borderRadius: '2px',
@@ -77,8 +59,8 @@ function FeatureOne(props) {
                 <div className={classes.FeatureOneText}>
                     Feature 1
                 </div>
-                <h1 className={classes.myHeadingOne}>Operational system <div>for Fast-growth B2B SaaS</div></h1>
-                <p className={classes.myParagraphOne}>
+                <h1 className='myHeadingOne'>Operational system <div>for Fast-growth B2B SaaS</div></h1>
+                <p className='myParagraphOne'>
                     Lorem ipsum dolor sit amet, consetetur <br />
         sadipscing elitr, sed diam nonumy eirmod tempor
               </p>

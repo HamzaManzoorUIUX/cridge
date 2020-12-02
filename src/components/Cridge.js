@@ -8,6 +8,7 @@ import Header from "./Header";
 import FeatureOne from "./FeatureOne";
 import Chatcomp from "./Chatcomp";
 import FeatureTwo from "./FeatureTwo";
+import BlogSection from "./BlogSection";
 
 
 function Cridge(props) {
@@ -22,6 +23,7 @@ function Cridge(props) {
             <Chatcomp/>
             <Container fixed>
             <FeatureTwo/>
+            <BlogSection/>
             </Container>
         </React.Fragment>
     );

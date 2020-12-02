@@ -1,12 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
 
-@media (min-width: 1280px)
-{
-  .MuiContainer-maxWidthLg {
-    max-width: 1140px !important;
-    padding: 0px !important;
-}
-}
+
 .ml-2{
   margin-left: 8px !important;
 }
@@ -55,7 +49,9 @@
   color: #4717B3;
   
 }
-
+.text-center{
+  text-align: center;
+}
 .h-Navmenu {
   display: flex;
   flex-grow: 1;
@@ -64,7 +60,49 @@
 .myImgRight{
   text-align: right;
 }
+
+.myHeadingOne {
+  font-size: 40px;
+  font-family: Roboto;
+  font-weight: bold;
+  line-height: 48px;
+  margin-bottom: 21px;
+  margin-top: 21px;
+
+}
+.text-md-right{
+text-align: right;
+}
+.myParagraphOne {
+  font-size: 20px;
+  color: black;
+  
+}
+.featureTwo{
+  margin-top: 200px;
+  margin-bottom: 300px;
+}
+@media (max-width:768px){
+  .myParagraphOne{
+   font-size: 14px; 
+  }
+.text-md-right{
+  text-align: center !important;
+}
+.myHeadingOne{
+  font-size: 22px;
+  line-height: 27px;
+}
+.featureTwo{
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+}
 @media (max-width:991px) {
+  .featureTwo{
+    margin-top: 150px;
+    margin-bottom: 225px;
+  }
   .myImgRight{
     text-align: center;
   }
@@ -115,4 +153,11 @@
     display: none !important;
 
   }
+}
+@media (min-width: 1280px)
+{
+  .MuiContainer-maxWidthLg {
+    max-width: 1140px !important;
+    padding: 0px !important;
+}
 }
