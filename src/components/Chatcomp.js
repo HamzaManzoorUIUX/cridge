@@ -32,7 +32,7 @@ function Chatcomp(props) {
                                 sadipscing elitr, sed diam nonumy eirmod tempor
                         </div>
                             <div className='c-tags'>
-                                Maciej Malesa , CTO, GTChat
+                            Lorem Ipsum, CTO, Lorem
                         </div>
                         </div>
                     </Grid>

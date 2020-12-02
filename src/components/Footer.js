@@ -5,7 +5,7 @@ function Footer(props) {
     return (
         <footer className="myFooter">
         <Grid container spacing={3}>
-            <Grid item md={4} lg={3} sm={12}>
+            <Grid item xs={6} md={6}>
             <ul className='footerList'>
                 <li>
                     <a href='!#'>
@@ -23,9 +23,6 @@ function Footer(props) {
                     </a>
                 </li>
             </ul>
-        
-            </Grid>
-            <Grid item md={4} lg={3} sm={12}>
             <ul  className='footerList'>
                 <li>
                     <a href='!#'>
@@ -45,9 +42,9 @@ function Footer(props) {
             </ul>
         
             </Grid>
-            <Grid item md={4} lg={6} sm={12}>
+            <Grid item xs={6} md={6}>
          <div className="text-md-right">
-             &copy; 2020
+             &copy; 2020 Templateondemand.co
          </div>
             </Grid>
        
