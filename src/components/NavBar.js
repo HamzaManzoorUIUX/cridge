@@ -50,20 +50,7 @@ const useStyles = makeStyles((theme) => ({
 
         }
     },
-    nav: {
-        position: 'relative',
-        zIndex: 3,
-        backgroundColor: 'white',
-        '&>.MuiContainer-root': {
-            display: 'flex',
-            justifyContent: 'space-between',
-            height: '93px',
-            alignItems: 'center',
-            ['@media (max-width:991px)']: {
-                height: '87px',
-            }
-        }
-    },
+ 
     navBtn: {
         listStyleType: 'none',
         paddingLeft: '0px',
@@ -77,75 +64,16 @@ const useStyles = makeStyles((theme) => ({
         }
 
     },
-    signUpBtn: {
-        background: 'linear-gradient(#6B33D6, #4213AE)',
-        borderRadius: '2px',
-        boxShadow: '0px 3px 6px 0px rgba(0,0,0,0.16)',
-        fontSize: '14px',
-        fontFamily: 'Roboto',
-        padding: '7px 44px',
-        fontWeight: "bold",
-        ['@media (max-width:991px)']: {
-            marginBottom: '79px',
-        }
-    },
-    logIn: {
-        fontSize: '14px',
-        fontFamily: 'Roboto',
-        padding: '7px 44px',
-        color: 'black',
-        textDecoration: 'none',
-        fontWeight: "bold",
-        display: 'block',
-        ['@media (max-width:991px)']: {
-            padding: '7px 16px',
-            minWidth: 'max-content'
-        }
-    },
+
     lockIcon: {
         height: '9.5px',
         width: '7.13px',
         marginRight: '8px'
     },
-    menuButton: {
-        color: '#4717B3',
-        ['@media (min-width:991px)']: {
-            display: 'none'
-        }
-    },
-    menu: {
-        display: 'flex',
-        flexGrow: 1,
-        ['@media (max-width:991px)']: {
-            display: 'none',
-            transition: 'easing',
-            position: "absolute",
-            backgroundColor: 'white',
-            zIndex: 2,
-            flexDirection: "column",
-            top: '87px',
-            left: '0px',
-            right: '0px',
-            paddingTop: '21px',
-            '&.show': {
-                display: 'block !important'
-            },
-            '&>ul': {
-                flexDirection: "column",
-                marginTop: '0px',
-                marginBottom: '0px',
-                '&>li': {
-                    margin: '14px auto',
-                    textAlign: 'center',
-                    width: '100%',
-                }
-            }
-        }
-    },
+  
+  
     mobileList: {
-        ['@media (min-width:991px)']: {
-            display: 'none'
-        },
+        
         '&>.MuiContainer-root': {
             display: 'flex',
             justifyContent: 'space-between',
@@ -220,12 +148,12 @@ function NavBar(props) {
     }
     return (
         <div className='position-relative'>
-            <nav className={classes.nav}>
+            <nav className='MainNav'>
                 <Container fixed>
                     <a href='!#' className={classes.BrandLogo}>
                         cridge
             </a>
-                    <div className={`${classes.menu} ${showMenu}`}>
+                    <div className={`h-Navmenu ${showMenu}`}>
                         <ul className={classes.navMenu}>
                             <li className='h-nav-link ' onClick={() => { productToggle() }}>
                                 <div className='dropText'>
@@ -245,17 +173,17 @@ function NavBar(props) {
                         </ul>
                         <ul className={classes.navBtn}>
                             <li className='h-navBtn-item'>
-                                <a href='!#' className={classes.logIn}>
+                                <a href='!#' className='logIn'>
                                     <img src={Lock} className={classes.lockIcon} />  Login
                     </a>
                             </li>
                             <li className='h-navBtn-item'>
-                                <Button className={classes.signUpBtn} variant="contained" color="secondary">
+                                <Button className='signUpBtn' variant="contained" color="secondary">
                                     SignUp
                     </Button>
                             </li>
                         </ul>
-                        <div className={classes.mobileList}>
+                        <div className={`md-none ${classes.mobileList}`}>
                             <Container fixed >
                                 <ul>
                                     <li>
@@ -295,7 +223,7 @@ function NavBar(props) {
                             </Container>
                         </div>
                     </div>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={() => { menuToggle() }}>
+                    <IconButton edge="start" className='menuButton' color="inherit" aria-label="menu" onClick={() => { menuToggle() }}>
                         {showMenu === 'hide' ? <MenuIcon /> : <CloseIcon />}
                     </IconButton>
                 </Container>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
 
 @media (min-width: 1280px)
 {
@@ -7,10 +7,6 @@
     padding: 0px !important;
 }
 }
-.font-Roboto{
-  font-family: 'Roboto', sans-serif;
-}
-
 .ml-2{
   margin-left: 8px !important;
 }
@@ -21,5 +17,102 @@
 .position-relative{
   position: relative;
 }
+.MainNav>.MuiContainer-root {
+  display: flex;
+  justify-content: space-between;
+  height: 93px;
+  align-items: center;
 
+}
+.MainNav{
+  position: relative;
+  z-index: 3;
+  background-color: white;
+  
+}
 
+.signUpBtn {
+  background: linear-gradient(#6B33D6, #4213AE);
+  border-radius: 2px;
+  box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+  font-size: 14px;
+  font-family: Roboto;
+  padding: 7px 44px;
+  font-weight: bold;
+
+}
+.logIn {
+  font-size: 14px;
+  font-family: Roboto;
+  padding: 7px 44px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+
+}
+.menuButton{
+  color: #4717B3;
+  
+}
+
+.h-Navmenu {
+  display: flex;
+  flex-grow: 1;
+ 
+}
+.myImgRight{
+  text-align: right;
+}
+@media (max-width:991px) {
+  .myImgRight{
+    text-align: center;
+  }
+.MainNav>.MuiContainer-root {
+  height: 87px;
+}
+.signUpBtn{
+  margin-bottom: 79px;
+}
+.logIn {
+  padding: 7px 16px;
+  min-width: max-content
+}
+.h-Navmenu{
+  display: none;
+  transition: ease-in;
+  position: absolute;
+  background-color: white;
+  z-index: 2;
+  flex-direction: column;
+  top: 87px;
+  left: 0px;
+  right: 0px;
+  padding-top: 21px;
+  
+  
+}
+.h-Navmenu.show{
+  display: block !important
+}
+.h-Navmenu>ul>li {
+  margin: 14px auto;
+  text-align: center;
+  width: 100%;
+}
+.h-Navmenu>ul {
+  flex-direction: column;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  
+}
+}
+@media (min-width:992px){
+  .menuButton{
+    display: none !important;
+  }
+  .md-none{
+    display: none !important;
+
+  }
+}
