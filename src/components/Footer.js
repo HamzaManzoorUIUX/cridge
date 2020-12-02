@@ -43,7 +43,7 @@ function Footer(props) {
         
             </Grid>
             <Grid item xs={6} md={6}>
-         <div className="text-md-right">
+         <div className="text-md-right f18">
              &copy; 2020 Templateondemand.co
          </div>
             </Grid>
