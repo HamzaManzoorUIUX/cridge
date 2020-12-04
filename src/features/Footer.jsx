@@ -1,12 +1,40 @@
-import { Grid } from '@material-ui/core';
+import { Grid, makeStyles } from '@material-ui/core';
 import React from 'react';
-
+const useStyle=makeStyles((theme)=>({
+    myFooter:{
+        minHeight: 285,
+  display: 'flex',
+  alignItems: 'center'
+    },
+    footerList:{
+        listStyleType: 'none',
+        margin: 0,
+        paddingLeft: 0,
+        '&>li':{
+            marginTop: 5,
+            marginBottom: 5,
+          
+          },
+          '&>li>a':{
+            color: 'black',
+            fontSize: 18
+          }
+    },
+    textRight:{
+        fontSize:18,
+        textAlign: 'right',
+        [theme.breakpoints.down('md')]: {
+            textAlign: 'center !important'
+        }
+    },
+}))
 function Footer(props) {
+    const classes=useStyle()
     return (
-        <footer className="myFooter">
+        <footer className={classes.myFooter}>
         <Grid container spacing={3}>
-            <Grid item xs={6} md={6}>
-            <ul className='footerList'>
+            <Grid item xs={5} md={6}>
+            <ul className={classes.footerList}>
                 <li>
                     <a href='!#'>
                         Email us
@@ -23,7 +51,7 @@ function Footer(props) {
                     </a>
                 </li>
             </ul>
-            <ul  className='footerList'>
+            <ul  className={classes.footerList}>
                 <li>
                     <a href='!#'>
                         Email us
@@ -42,8 +70,8 @@ function Footer(props) {
             </ul>
         
             </Grid>
-            <Grid item xs={6} md={6}>
-         <div className="text-md-right f18">
+            <Grid item xs={7} md={6}>
+         <div className={classes.textRight}>
              &copy; 2020 Templateondemand.co
          </div>
             </Grid>

@@ -11,10 +11,17 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     marginTop:190,
     marginBottom:190,
+    [theme.breakpoints.down('sm')]:{
+      marginTop:70,
+    marginBottom:70,
+    }
   },
   heading: {
     fontSize: 18,
     fontWeight: "bold",
+    [theme.breakpoints.down('sm')]:{
+      fontSize:14
+    }
   },
   head:{
       borderTop:'1px solid #DAE2F2',
@@ -26,6 +33,16 @@ const useStyles = makeStyles((theme) => ({
     fontSize:46,
     fontWeight:"bold",
     textAlign:'center',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 28 
+  }
+  },
+  faqItem:{
+    boxShadow: 'none !important',
+    
+  },
+  AddIcon:{
+    color:'#4717B3'
   }
 }));
 
@@ -39,9 +56,9 @@ const sample=[1,2,3,4,5,6,7]
       </h1>
     {
         sample.map((i,index)=>{
-            return <Accordion key={index}>
+            return <Accordion key={index} className={classes.faqItem}>
             <AccordionSummary
-              expandIcon={<AddIcon />}
+              expandIcon={<AddIcon className={classes.AddIcon} />}
               aria-controls={`panel1a-content${i}`}
               id={`panel1a-header${i}`}
               className={classes.head}

@@ -6,7 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme)=>({
   root: {
     maxWidth: 349,
     margin:'auto',
@@ -26,17 +26,25 @@ position:"relative",
       right:0,
       backgroundColor:'#F7FAFE',
       paddingLeft:30,
+      [theme.breakpoints.down('sm')]:{
+        textAlign:'center'
+      }
   },
   CardTitle:{
       fontSize:20,
       fontWeight:"bold",
       maxWidth:226,
+      [theme.breakpoints.down('sm')]:{
+        maxWidth:'100%',
+        textAlign:'center'
+      }
   },
   ReadMore:{
      fontSize:17,
      textDecoration:'underline', 
+    
   }
-});
+}));
 
 export default function MediaCard(props) {
   const classes = useStyles();

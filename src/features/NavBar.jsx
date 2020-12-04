@@ -10,6 +10,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles((theme) => ({
+    pRelative:{
+        position:'relative'
+    },
     root: {
         flexGrow: 1,
     },
@@ -24,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         marginRight: '21px'
     },
-    navMenu: {
+    navMenuUl: {
         listStyleType: 'none',
         paddingLeft: '0px',
         display: 'flex',
@@ -72,7 +75,9 @@ const useStyles = makeStyles((theme) => ({
   
   
     mobileList: {
-        
+        [theme.breakpoints.down('md')]:{
+            display: 'none'
+        },
         '&>.MuiContainer-root': {
             display: 'flex',
             justifyContent: 'space-between',
@@ -104,7 +109,83 @@ const useStyles = makeStyles((theme) => ({
         right: '0px',
         bottom: '0px',
         zIndex: '1',
-    }
+    },
+    MainNav:{
+        position: 'relative',
+        zIndex: 3,
+        backgroundColor: 'white'
+        
+      },
+      Navmenu:{
+        display: 'flex',
+        flexGrow: 1,
+        [theme.breakpoints.down('md')]:{
+            display: 'none',
+            transition: 'ease-in',
+            position: 'absolute',
+            backgroundColor: 'white',
+            zIndex: 2,
+            flexDirection: 'column',
+            top: 87,
+            left: 0,
+            right: 0,
+            paddingTop: 21,
+            '&.show':{
+                display: 'block !important'
+              },
+              '&>ul': {
+                flexDirection: 'column',
+                marginTop: 0,
+                marginBottom: 0,
+                '&>li': {
+                    margin: '14px auto',
+                    textAlign: 'center',
+                    width: '100%',
+                  }
+              }
+        }
+      },
+      logIn :{
+        fontSize: 16,
+        padding: '7px 44px',
+        color: 'black',
+        textDecoration: 'none',
+        fontWeight: 'bold',
+        display: 'block',
+        [theme.breakpoints.down('md')]:{
+            padding: '7px 16px',
+            minWidth: 'max-content'
+        }
+      },
+      signUpBtn :{
+        background: 'linear-gradient(#6B33D6, #4213AE)',
+        borderRadius: 2,
+        boxShadow: '0px 3px 6px 0px rgba(0,0,0,0.16)',
+        fontSize: '14px',
+        padding: '7px 44px',
+        fontWeight: 'bold',
+        [theme.breakpoints.down('sm')]:{
+        marginBottom: 79
+      }
+      },
+      menuButton:{
+        color: '#4717B3',
+        [theme.breakpoints.down('md')]:{
+            display: 'none'
+          }
+      },
+      dropIcon:{
+          '&.true':{
+            transform: 'rotateZ(180deg)',
+            transition: 'all'
+          }
+      },
+      container:{
+        display: 'flex',
+        justifyContent: 'space-between',
+        height: 93,
+        alignItems: 'center'
+      }
 }));
 
 function NavBar(props) {
@@ -146,43 +227,43 @@ function NavBar(props) {
         }
     }
     return (
-        <div className='position-relative'>
-            <nav className='MainNav'>
-                <Container fixed>
+        <div className={classes.pRelative}>
+            <nav className={classes.MainNav}>
+                <Container fixed className={classes.container}>
                     <a href='!#' className={classes.BrandLogo}>
                         cridge
             </a>
-                    <div className={`h-Navmenu ${showMenu}`}>
-                        <ul className={classes.navMenu}>
-                            <li className='h-nav-link ' onClick={() => { productToggle() }}>
+                    <div className={`${classes.Navmenu} ${showMenu}`}>
+                        <ul className={classes.navMenuUl}>
+                            <li  onClick={() => { productToggle() }}>
                                 <div className='dropText'>
                                     Products <ExpandMoreIcon width={'7.66px'} height={'4.83px'} property={`ml-2 dropIcon ${productDrop}`} />
                                 </div>
                                 <DropDown show={productDrop} />
                             </li>
-                            <li className='h-nav-link' onClick={() => { solutionToggle() }}>
+                            <li  onClick={() => { solutionToggle() }}>
                                 <div  className='dropText'>
-                                    Solutions <ExpandMoreIcon width={'7.66px'} height={'4.83px'} property={`ml-2 dropIcon ${solutionDrop}`} />
+                                    Solutions <ExpandMoreIcon width={'7.66px'} height={'4.83px'} property={`${classes.dropIcon} ${solutionDrop}`} />
                                 </div>
                                 <DropDown show={solutionDrop} />
                             </li>
-                            <li className='h-nav-link'>
+                            <li >
                                 Pricing
                 </li>
                         </ul>
                         <ul className={classes.navBtn}>
-                            <li className='h-navBtn-item'>
-                                <a href='!#' className='logIn'>
+                            <li>
+                                <a href='!#' className={classes.logIn}>
                                     <img src={Lock} className={classes.lockIcon}  alt='lock'/>  Login
                     </a>
                             </li>
-                            <li className='h-navBtn-item'>
-                                <Button className='signUpBtn' variant="contained" color="secondary">
+                            <li>
+                                <Button className={classes.signUpBtn} variant="contained" color="secondary">
                                     SignUp
                     </Button>
                             </li>
                         </ul>
-                        <div className={`md-none ${classes.mobileList}`}>
+                        <div className={`${classes.mobileList}`}>
                             <Container fixed >
                                 <ul>
                                     <li>
@@ -222,7 +303,7 @@ function NavBar(props) {
                             </Container>
                         </div>
                     </div>
-                    <IconButton edge="start" className='menuButton' color="inherit" aria-label="menu" onClick={() => { menuToggle() }}>
+                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={() => { menuToggle() }}>
                         {showMenu === 'hide' ? <MenuIcon /> : <CloseIcon />}
                     </IconButton>
                 </Container>
