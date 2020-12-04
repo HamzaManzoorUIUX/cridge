@@ -1,5 +1,5 @@
 import React from 'react';
-import Cridge from './components/Cridge'
+import Cridge from './features/Cridge'
 import './App.css';
 
 function App() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import Button from '@material-ui/core/Button';
-import { Facebook, LinkedIn, Airbnb, Spotify, minHomePic } from "./ComponetsImp";
+import { Facebook, LinkedIn, Airbnb, Spotify, minHomePic } from "../components/ComponetsImp";
 
 const useStyles = makeStyles((theme) => ({
     

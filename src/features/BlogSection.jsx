@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core'
-import Card from "./Card";
-import Visiting from './Visiting';
+import Card from "../components/Card";
+import Visiting from '../components/Visiting';
 
 function BlogSection(props) {
     return (

@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
-import ExpandMoreIcon from './ExpandMoreIcon';
+import ExpandMoreIcon from '../components/ExpandMoreIcon';
 import Lock from '../assets/icons/lock.svg';
-import DropDownProd from "./DropDownProd";
-import DropDownSol from "./DropDownSol";
+import DropDown from "../components/DropDown";
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
@@ -159,13 +158,13 @@ function NavBar(props) {
                                 <div className='dropText'>
                                     Products <ExpandMoreIcon width={'7.66px'} height={'4.83px'} property={`ml-2 dropIcon ${productDrop}`} />
                                 </div>
-                                <DropDownProd show={productDrop} />
+                                <DropDown show={productDrop} />
                             </li>
                             <li className='h-nav-link' onClick={() => { solutionToggle() }}>
                                 <div  className='dropText'>
                                     Solutions <ExpandMoreIcon width={'7.66px'} height={'4.83px'} property={`ml-2 dropIcon ${solutionDrop}`} />
                                 </div>
-                                <DropDownSol show={solutionDrop} />
+                                <DropDown show={solutionDrop} />
                             </li>
                             <li className='h-nav-link'>
                                 Pricing
