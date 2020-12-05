@@ -76,11 +76,11 @@ function DropDownSol({ show }) {
                   </li>
                     </ul>
                 </div>
-                <div className={'singleItem'}>
-                    <div className={'h-heading'}>
+                <div className={classes.singleItem}>
+                    <div className={classes.heading}>
                         Marketing
                   </div>
-                    <ul className={'list'}>
+                    <ul className={classes.list}>
                         <li>
                             Automation
                   </li>
@@ -89,11 +89,11 @@ function DropDownSol({ show }) {
                   </li>
                     </ul>
                 </div>
-                <div className={'singleItem'}>
-                    <div className={'h-heading'}>
+                <div className={classes.singleItem}>
+                    <div className={classes.heading}>
                         Scaling templates
                   </div>
-                    <ul className={'list'}>
+                    <ul className={classes.list}>
                         <li>
                             SaaS
                   </li>

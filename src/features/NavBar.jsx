@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
   
   
     mobileList: {
-        [theme.breakpoints.down('md')]:{
+        [theme.breakpoints.up('md')]:{
             display: 'none'
         },
         '&>.MuiContainer-root': {
@@ -170,11 +170,12 @@ const useStyles = makeStyles((theme) => ({
       },
       menuButton:{
         color: '#4717B3',
-        [theme.breakpoints.down('md')]:{
+        [theme.breakpoints.up('md')]:{
             display: 'none'
           }
       },
       dropIcon:{
+          marginLeft:'.5rem',
           '&.true':{
             transform: 'rotateZ(180deg)',
             transition: 'all'
@@ -235,14 +236,14 @@ function NavBar(props) {
             </a>
                     <div className={`${classes.Navmenu} ${showMenu}`}>
                         <ul className={classes.navMenuUl}>
-                            <li  onClick={() => { productToggle() }}>
-                                <div className='dropText'>
-                                    Products <ExpandMoreIcon width={'7.66px'} height={'4.83px'} property={`ml-2 dropIcon ${productDrop}`} />
+                            <li >
+                                <div className='dropText' onClick={() => { productToggle() }}>
+                                    Products <ExpandMoreIcon width={'7.66px'} height={'4.83px'} property={`${classes.dropIcon} ${productDrop}`} />
                                 </div>
                                 <DropDown show={productDrop} />
                             </li>
-                            <li  onClick={() => { solutionToggle() }}>
-                                <div  className='dropText'>
+                            <li >
+                                <div  className='dropText' onClick={() => { solutionToggle() }}>
                                     Solutions <ExpandMoreIcon width={'7.66px'} height={'4.83px'} property={`${classes.dropIcon} ${solutionDrop}`} />
                                 </div>
                                 <DropDown show={solutionDrop} />
