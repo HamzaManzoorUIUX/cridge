@@ -1,6 +1,5 @@
 import React from 'react';
 import Cridge from './features/Cridge'
-import './App.css';
 
 function App() {
   return (

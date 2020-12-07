@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     subscribeInput: {
+        boxSizing:'border-box',
         [theme.breakpoints.up('md')]: {
             width: '100%',
             border: '1px solid #4717B3',
@@ -41,6 +42,8 @@ const useStyles = makeStyles((theme) => ({
             alignItems: 'center',
             borderRadius: 4,
             paddingRight: 4,
+            paddingTop:0,
+            paddingBottom:0,
             justifyContent: 'space-between',
             backgroundColor: 'white'
         },
@@ -66,23 +69,26 @@ const useStyles = makeStyles((theme) => ({
     input: {
 
         [theme.breakpoints.down('md')]: {
-            '&:focus,&:active': {
-                border: 'none',
-                outline: 'none',
-                boxShadow: 'none'
-            }
+          
+        marginBottom: 8,
+
         },
         [theme.breakpoints.up('md')]: {
             width: '100%',
             border: 'none',
-            paddingLeft: 16
+            paddingLeft: 16,
+            '&:focus,&:active': {
+                border: 'none',
+                outline: 'none',
+                boxShadow: 'none'
+            },
         },
-        height: 40,
+height:'32px',
+boxSizing:"border-box",
         borderRadius: 4,
         border: '1px solid #4717B3',
         paddingLeft: '16px',
         width: '100%',
-        marginBottom: 8,
     }
 }))
 
